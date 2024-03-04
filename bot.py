@@ -23,7 +23,7 @@ def hello(*args):
 @input_error
 def add(*args):
     information = args[0]
-    if not information[0] in CONTACTS:
+    if information[0] not in CONTACTS:
         CONTACTS[information[0]] = information[1]
         return f'A contact with the name {information[0]} and number: {information[1]} has been added'
     else:
